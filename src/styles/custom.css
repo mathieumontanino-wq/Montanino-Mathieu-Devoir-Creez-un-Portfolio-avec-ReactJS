@@ -1,56 +1,188 @@
-.hero-section {
-  height: 75vh;
+/* =========================
+   GLOBAL
+========================= */
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+}
+
+section {
+  position: relative;
+}
+
+/* =========================
+   TITRES AVEC TRAIT BLEU
+========================= */
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+.section-line {
+  width: 100%;      /* ajuste si besoin */
+  height: 4px;
+  background-color: #0d6efd;
+  margin: 0  0 30px 0; /* espace au dessus et dessous */
+}
+
+
+/* Variante centrée (Services) */
+.section-title.text-center::after {
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+}
+
+/* Variante gauche (About) */
+.section-title:not(.text-center)::after {
+  left: 0;
+  width: 100%;
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about-section {
+  background-color: #f8f9fa;
+}
+
+.about-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.about-img {
+  max-height: 280px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Progress bars modernisées */
+
+.progress {
+  height: 8px;
+  border-radius: 5px;
+  background-color: #e9ecef;
+}
+
+.progress-bar {
+  border-radius: 5px;
+}
+
+/* =========================
+   SERVICES SECTION
+========================= */
+
+.services-banner {
+  height: 250px;
   background-size: cover;
   background-position: center;
-  position: relative;
+  background-repeat: no-repeat;
 }
 
-.hero-section .overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  top: 0;
-  left: 0;
+.services-divider {
+  width:35%;          /* longueur visible sur ta capture */
+  height: 4px;
+  background-color: #0d6efd;
+  margin: 20px auto 50px auto;  /* centre horizontalement */
 }
 
-.hero-section .content {
-  position: relative;
-  z-index: 2;
+
+
+.services-section {
+  background-color: #f8f9fa;
 }
 
-.footer-custom {
-  background: linear-gradient(180deg, #2b3035 0%, #1f2327 100%);
+.service-card {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 40px 25px;
+  text-align: center; /* centre tout */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-icon {
+  font-size: 1.5rem;
+  color: #0d6efd; /* bleu Bootstrap */
+  display: block;
+  margin:0 auto 20px;
+}
+
+
+.service-card:hover {
+  background-color: #efefef;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.service-icon i {
+  font-size: 2rem;
+  color: #0d6efd;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: linear-gradient(90deg, #212529, #2c3034);
   color: #ffffff;
 }
 
-.footer-custom h6 {
-  color: #ffffff;
+footer h5 {
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
-.footer-custom a {
+footer a {
   color: #adb5bd;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
 }
 
-.footer-custom a:hover {
+footer a:hover {
   color: #ffffff;
 }
 
-.footer-icons a {
-  color: #6c757d;
-  font-size: 1.3rem;
-  transition: color 0.3s ease;
+footer i {
+  font-size: 1.2rem;
+  margin-right: 10px;
+  transition: color 0.2s ease;
 }
 
-.footer-icons a:hover {
-  color: #ffffff;
+footer i:hover {
+  color: #0d6efd;
 }
 
-.footer-bottom {
-  background-color: #16191c;
-  font-size: 0.9rem;
-  color: #adb5bd;
+/* =========================
+   HERO (optionnel propre)
+========================= */
+
+.hero-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
+/* =========================
+   RESPONSIVE FINE TUNING
+========================= */
+
+@media (max-width: 768px) {
+  .about-img {
+    max-height: 220px;
+  }
+
+  .section-title {
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+  }
+}
