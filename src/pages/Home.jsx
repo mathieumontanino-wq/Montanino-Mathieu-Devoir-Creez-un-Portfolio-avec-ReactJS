@@ -1,8 +1,21 @@
+import { useState } from "react";
+import Hero from "../components/Hero";
+import GithubModal from "../components/layout/GithubModal";
+
+
+
 function Home() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
-    <div className="container mt-5">
-      <h1 className="text-center">Accueil</h1>
-    </div>
+    <>
+      <Hero onOpenModal={() => setShowModal(true)} />
+
+      <GithubModal
+        show={showModal}
+        handleClose={() => setShowModal(false)}
+      />
+    </>
   );
 }
 
