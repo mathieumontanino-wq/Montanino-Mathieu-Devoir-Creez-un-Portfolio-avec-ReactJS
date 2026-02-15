@@ -5,7 +5,8 @@ import heroBg from "../assets/images/hero-bg.jpg";
 function Hero({ onOpenModal }) {
   return (
     <section
-      className="hero-section d-flex align-items-center justify-content-center text-center text-white"
+      className="hero-section d-flex align-items-start justify-content-center text-center text-white pt-5"
+
       style={{
         backgroundImage: `url(${heroBg})`,
         height: "100vh",
