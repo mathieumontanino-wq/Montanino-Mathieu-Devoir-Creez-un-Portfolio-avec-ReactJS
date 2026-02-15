@@ -71,6 +71,18 @@ function Header() {
               </NavLink>
             </li>
 
+            <li className="nav-item">
+              <NavLink
+                to="/mentions-legales"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active text-danger" : "nav-link"
+                }
+              >
+                Mentions légales
+              </NavLink>
+            </li>
+
+
           </ul>
         </div>
 
