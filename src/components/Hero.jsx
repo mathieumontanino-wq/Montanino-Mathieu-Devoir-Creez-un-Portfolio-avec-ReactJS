@@ -1,5 +1,7 @@
 import heroBg from "../assets/images/hero-bg.jpg";
 
+
+
 function Hero({ onOpenModal }) {
   return (
     <section
