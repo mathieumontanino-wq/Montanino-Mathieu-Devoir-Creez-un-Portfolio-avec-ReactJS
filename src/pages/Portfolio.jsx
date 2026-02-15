@@ -34,7 +34,7 @@ function Portfolio() {
               <div className="card portfolio-card h-100">
                 <img src={freshFood} className="card-img-top" alt="Fresh Food" />
                 <div className="card-body">
-                  <h5 className="card-title">Fresh Food</h5>
+                  <h4 className="card-title">Fresh Food</h4>
                   <p className="card-text">
                     Site de vente de produits frais en ligne
                   </p>
@@ -53,7 +53,7 @@ function Portfolio() {
               <div className="card portfolio-card h-100">
                 <img src={restaurant} className="card-img-top" alt="Restaurant" />
                 <div className="card-body">
-                  <h5 className="card-title">Restaurant Akira</h5>
+                  <h4 className="card-title">Restaurant Akira</h4>
                   <p className="card-text">
                     Site de vente de produits frais en ligne
                   </p>
@@ -72,7 +72,7 @@ function Portfolio() {
               <div className="card portfolio-card h-100">
                 <img src={espace} className="card-img-top" alt="Espace bien-être" />
                 <div className="card-body">
-                  <h5 className="card-title">Espace bien-être</h5>
+                  <h4 className="card-title">Espace bien-être</h4>
                   <p className="card-text">
                     Site de vente de produits frais en ligne
                   </p>
@@ -91,7 +91,7 @@ function Portfolio() {
               <div className="card portfolio-card h-100">
                 <img src={seo} className="card-img-top" alt="SEO" />
                 <div className="card-body">
-                  <h5 className="card-title">SEO</h5>
+                  <h4 className="card-title">SEO</h4>
                   <p className="card-text">
                     Amélioration du référencement d'un site e-commerce
                   </p>
@@ -110,7 +110,7 @@ function Portfolio() {
               <div className="card portfolio-card h-100">
                 <img src={api} className="card-img-top" alt="API" />
                 <div className="card-body">
-                  <h5 className="card-title">Création d'une API</h5>
+                  <h4 className="card-title">Création d'une API</h4>
                   <p className="card-text">
                     Création d'une API RESTFUL publique
                   </p>
@@ -129,7 +129,7 @@ function Portfolio() {
               <div className="card portfolio-card h-100">
                 <img src={maquette} className="card-img-top" alt="Maquette" />
                 <div className="card-body">
-                  <h5 className="card-title">Maquette d'un site web</h5>
+                  <h4 className="card-title">Maquette d'un site web</h4>
                   <p className="card-text">
                     Création du prototype d'un site
                   </p>
