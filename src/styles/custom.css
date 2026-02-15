@@ -186,3 +186,42 @@ footer i:hover {
     margin-bottom: 25px;
   }
 }
+
+/* ===== BANNER ===== */
+
+.page-banner {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* ===== SECTION ===== */
+
+.portfolio-section {
+  background-color: #f8f9fa;
+}
+
+/* Trait bleu identique Services */
+.section-divider {
+  width:30%;
+  height: 4px;
+  background-color: #0d6efd;
+}
+
+/* ===== CARDS ===== */
+
+.portfolio-card {
+  border: 1px solid #dee2e6;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.portfolio-card:hover {
+  background-color: #efefef;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.portfolio-card img {
+  height: 200px;
+  object-fit: cover;
+}
