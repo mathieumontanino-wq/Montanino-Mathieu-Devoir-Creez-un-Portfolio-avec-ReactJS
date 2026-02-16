@@ -1,33 +1,43 @@
+/**
+ * Page Mentions légales.
+ * Contient les informations légales obligatoires du site.
+ */
 function MentionsLegales() {
   return (
     <section className="legal-section py-5">
-      <div className="container text-center mb-4">
-        <h1 className="fw-bold">Mentions légales</h1>
-        <div
-          style={{
-            width: "350px",
-            height: "5px",
-            backgroundColor: "#0d6efd",
-            margin: "10px auto 0",
-            borderRadius: "5px"
-          }}
-        ></div>
-      </div>
+      <div className="container">
 
-     <div className="container">
- 
+        {/* ======================
+            TITRE PRINCIPAL
+        ====================== */}
+        <header className="text-center mb-4">
+          <h1 className="fw-bold">Mentions légales</h1>
+          <div
+            style={{
+              width: "350px",
+              height: "5px",
+              backgroundColor: "#0d6efd",
+              margin: "10px auto 0",
+              borderRadius: "5px"
+            }}
+          ></div>
+        </header>
 
-
+        {/* ======================
+            ACCORDION
+        ====================== */}
         <div className="accordion" id="legalAccordion">
 
-          {/* ÉDITEUR */}
+          {/* ÉDITEUR DU SITE */}
           <div className="accordion-item">
-            <h2 className="accordion-header">
+            <h2 className="accordion-header" id="headingOne">
               <button
                 className="accordion-button collapsed"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#collapseOne"
+                aria-expanded="false"
+                aria-controls="collapseOne"
               >
                 Éditeur du site
               </button>
@@ -36,31 +46,16 @@ function MentionsLegales() {
             <div
               id="collapseOne"
               className="accordion-collapse collapse"
+              aria-labelledby="headingOne"
               data-bs-parent="#legalAccordion"
             >
               <div className="accordion-body">
 
-                <h4 className="fw-bold mb-3">John Doe</h4>
-
-                <p>
-                  <i className="bi bi-map me-2"></i>
-                  40 rue Laure Diebold
-                </p>
-
-                <p>
-                  <i className="bi bi-geo-alt me-2"></i>
-                  69009 Lyon, France
-                </p>
-
-                <p>
-                  <i className="bi bi-phone me-2"></i>
-                  10 20 30 40 50
-                </p>
-
-                <p>
-                  <i className="bi bi-envelope me-2"></i>
-                  john.doe@gmail.com
-                </p>
+                <p><strong>John Doe</strong></p>
+                <p>40 rue Laure Diebold</p>
+                <p>69009 Lyon, France</p>
+                <p>10 20 30 40 50</p>
+                <p>john.doe@gmail.com</p>
 
               </div>
             </div>
@@ -68,12 +63,14 @@ function MentionsLegales() {
 
           {/* HÉBERGEUR */}
           <div className="accordion-item">
-            <h2 className="accordion-header">
+            <h2 className="accordion-header" id="headingTwo">
               <button
                 className="accordion-button collapsed"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
               >
                 Hébergeur
               </button>
@@ -82,23 +79,19 @@ function MentionsLegales() {
             <div
               id="collapseTwo"
               className="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
               data-bs-parent="#legalAccordion"
             >
               <div className="accordion-body">
 
-                <h4 className="fw-bold mb-3">Alwaysdata</h4>
+                <p><strong>Alwaysdata</strong></p>
+                <p>91 Rue du Faubourg Saint-Honoré, 75008 Paris</p>
 
                 <p>
-                  <i className="bi bi-map me-2"></i>
-                  91 Rue du Faubourg Saint-Honoré, 75008 Paris
-                </p>
-
-                <p>
-                  <i className="bi bi-globe me-2"></i>
                   <a
                     href="https://www.alwaysdata.com"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                   >
                     www.alwaysdata.com
                   </a>
@@ -109,54 +102,65 @@ function MentionsLegales() {
           </div>
 
           {/* CRÉDITS */}
-          {/* CRÉDITS */}
-<div className="accordion-item">
-  <h2 className="accordion-header">
-    <button
-      className="accordion-button collapsed"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#collapseThree"
-    >
-      Crédits
-    </button>
-  </h2>
+          <div className="accordion-item">
+            <h2 className="accordion-header" id="headingThree">
+              <button
+                className="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                Crédits
+              </button>
+            </h2>
 
-  <div
-    id="collapseThree"
-    className="accordion-collapse collapse"
-    data-bs-parent="#legalAccordion"
-  >
-    <div className="accordion-body">
+            <div
+              id="collapseThree"
+              className="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#legalAccordion"
+            >
+              <div className="accordion-body">
 
-      <h4 className="fw-bold mb-3">Crédits</h4>
+                <p>
+                  Ce site a été réalisé par John Doe, étudiant au{" "}
+                  <a
+                    href="https://www.centre-europeen-formation.fr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Centre Européen de Formation
+                  </a>.
+                </p>
 
-      <p>
-        Ce site a été réalisé par John Doe, étudiant au{" "}
-        <a href="#" target="_blank" rel="noreferrer">
-          Centre Européen de formation
-        </a>.
-      </p>
+                <p>
+                  Les images utilisées sur ce site sont libres de droits et
+                  proviennent de{" "}
+                  <a
+                    href="https://pixabay.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Pixabay
+                  </a>.
+                </p>
 
-      <p className="fst-italic">
-        Les images utilisées sur ce site sont libres de droits et ont été
-        obtenues sur le site{" "}
-        <a href="https://pixabay.com" target="_blank" rel="noreferrer">
-          Pixabay
-        </a>.
-      </p>
+                <p>
+                  La favicon du site provient de{" "}
+                  <a
+                    href="https://www.flaticon.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Flaticon
+                  </a>.
+                </p>
 
-      <p className="fst-italic">
-        La favicon de ce site a été fournie par{" "}
-        <a href="https://www.flaticon.com" target="_blank" rel="noreferrer">
-          John doe Icons erstellt von Freepik - Flaticon
-        </a>.
-      </p>
-
-    </div>
-  </div>
-</div>
-
+              </div>
+            </div>
+          </div>
 
         </div>
       </div>

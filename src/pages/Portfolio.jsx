@@ -7,141 +7,116 @@ import seo from "../assets/images/portfolio/seo.jpg";
 import api from "../assets/images/portfolio/coder.jpg";
 import maquette from "../assets/images/portfolio/screens.jpg";
 
+/**
+ * Page Portfolio.
+ * Présente les différentes réalisations professionnelles.
+ */
 function Portfolio() {
+
+  // Liste des projets pour éviter la répétition de code
+  const projects = [
+    {
+      title: "Fresh Food",
+      image: freshFood,
+      description: "Site e-commerce de vente de produits frais en ligne.",
+      tech: "PHP et MySQL",
+      alt: "Site e-commerce de produits alimentaires frais"
+    },
+    {
+      title: "Restaurant Akira",
+      image: restaurant,
+      description: "Site vitrine pour un restaurant japonais.",
+      tech: "WordPress",
+      alt: "Site web vitrine pour restaurant japonais"
+    },
+    {
+      title: "Espace bien-être",
+      image: espace,
+      description: "Site vitrine pour un centre de relaxation et bien-être.",
+      tech: "Laravel",
+      alt: "Site web pour centre de bien-être"
+    },
+    {
+      title: "SEO",
+      image: seo,
+      description: "Optimisation du référencement d'un site e-commerce.",
+      tech: "Outils SEO professionnels",
+      alt: "Optimisation du référencement naturel"
+    },
+    {
+      title: "Création d'une API",
+      image: api,
+      description: "Développement d'une API RESTful publique.",
+      tech: "PHP et Symfony",
+      alt: "Développement API REST"
+    },
+    {
+      title: "Maquette d'un site web",
+      image: maquette,
+      description: "Conception d'un prototype de site web.",
+      tech: "Figma",
+      alt: "Prototype de site web réalisé sur Figma"
+    }
+  ];
+
   return (
     <>
-      {/* ====== BANNER IDENTIQUE SERVICES ====== */}
-      <div
+      {/* =============================
+          BANNIÈRE DE PAGE
+      ============================= */}
+      <header
         className="page-banner"
         style={{ backgroundImage: `url(${banner})` }}
-      ></div>
+      ></header>
 
-      {/* ====== SECTION PORTFOLIO ====== */}
+      {/* =============================
+          SECTION PORTFOLIO
+      ============================= */}
       <section className="portfolio-section py-5">
         <div className="container text-center">
 
           <h1 className="fw-bold mb-2">Portfolio</h1>
+
           <p className="text-muted mb-3">
-            Voici quelques-unes de mes réalisations.
+            Découvrez quelques-unes de mes réalisations en développement web.
           </p>
 
           <div className="section-divider mx-auto mb-5"></div>
 
           <div className="row g-4">
 
-            {/* CARD 1 */}
-            <div className="col-md-6 col-lg-4">
-              <div className="card portfolio-card h-100">
-                <img src={freshFood} className="card-img-top" alt="Fresh Food" />
-                <div className="card-body">
-                  <h4 className="card-title">Fresh Food</h4>
-                  <p className="card-text">
-                    Site de vente de produits frais en ligne
-                  </p>
-                  <button className="btn btn-primary btn-sm">
-                    Voir le site
-                  </button>
-                </div>
-                <div className="card-footer text-muted small">
-                  Site réalisé avec PHP et MySQL
-                </div>
-              </div>
-            </div>
+            {/* Génération dynamique des projets */}
+            {projects.map((project, index) => (
+              <article key={index} className="col-md-6 col-lg-4">
+                <div className="card portfolio-card h-100">
 
-            {/* CARD 2 */}
-            <div className="col-md-6 col-lg-4">
-              <div className="card portfolio-card h-100">
-                <img src={restaurant} className="card-img-top" alt="Restaurant" />
-                <div className="card-body">
-                  <h4 className="card-title">Restaurant Akira</h4>
-                  <p className="card-text">
-                    Site de vente de produits frais en ligne
-                  </p>
-                  <button className="btn btn-primary btn-sm">
-                    Voir le site
-                  </button>
-                </div>
-                <div className="card-footer text-muted small">
-                  Site réalisé avec WordPress
-                </div>
-              </div>
-            </div>
+                  <img
+                    src={project.image}
+                    className="card-img-top"
+                    alt={project.alt}
+                  />
 
-            {/* CARD 3 */}
-            <div className="col-md-6 col-lg-4">
-              <div className="card portfolio-card h-100">
-                <img src={espace} className="card-img-top" alt="Espace bien-être" />
-                <div className="card-body">
-                  <h4 className="card-title">Espace bien-être</h4>
-                  <p className="card-text">
-                    Site de vente de produits frais en ligne
-                  </p>
-                  <button className="btn btn-primary btn-sm">
-                    Voir le site
-                  </button>
-                </div>
-                <div className="card-footer text-muted small">
-                  Site réalisé avec LARAVEL
-                </div>
-              </div>
-            </div>
+                  <div className="card-body">
+                    <h2 className="card-title h4">
+                      {project.title}
+                    </h2>
 
-            {/* CARD 4 */}
-            <div className="col-md-6 col-lg-4">
-              <div className="card portfolio-card h-100">
-                <img src={seo} className="card-img-top" alt="SEO" />
-                <div className="card-body">
-                  <h4 className="card-title">SEO</h4>
-                  <p className="card-text">
-                    Amélioration du référencement d'un site e-commerce
-                  </p>
-                  <button className="btn btn-primary btn-sm">
-                    Voir le site
-                  </button>
-                </div>
-                <div className="card-footer text-muted small">
-                  Utilisation des outils SEO
-                </div>
-              </div>
-            </div>
+                    <p className="card-text">
+                      {project.description}
+                    </p>
 
-            {/* CARD 5 */}
-            <div className="col-md-6 col-lg-4">
-              <div className="card portfolio-card h-100">
-                <img src={api} className="card-img-top" alt="API" />
-                <div className="card-body">
-                  <h4 className="card-title">Création d'une API</h4>
-                  <p className="card-text">
-                    Création d'une API RESTFUL publique
-                  </p>
-                  <button className="btn btn-primary btn-sm">
-                    Voir le site
-                  </button>
-                </div>
-                <div className="card-footer text-muted small">
-                  PHP - SYMFONY
-                </div>
-              </div>
-            </div>
+                    <button className="btn btn-primary btn-sm">
+                      Voir le site
+                    </button>
+                  </div>
 
-            {/* CARD 6 */}
-            <div className="col-md-6 col-lg-4">
-              <div className="card portfolio-card h-100">
-                <img src={maquette} className="card-img-top" alt="Maquette" />
-                <div className="card-body">
-                  <h4 className="card-title">Maquette d'un site web</h4>
-                  <p className="card-text">
-                    Création du prototype d'un site
-                  </p>
-                  <button className="btn btn-primary btn-sm">
-                    Voir le site
-                  </button>
+                  <div className="card-footer text-muted small">
+                    Site réalisé avec {project.tech}
+                  </div>
+
                 </div>
-                <div className="card-footer text-muted small">
-                  Réalisé avec FIGMA
-                </div>
-              </div>
-            </div>
+              </article>
+            ))}
 
           </div>
         </div>
